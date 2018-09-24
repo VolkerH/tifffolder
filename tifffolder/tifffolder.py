@@ -269,6 +269,7 @@ class TiffFolder(object):
         stacks = np.empty(tuple(out_shape))
 
         def read_file(zipped_idx):
+            print("in readfile !!!!!!!!!!")
             stack_idx, f_array_idx = zipped_idx
             fpath = self._file_array[f_array_idx]
             data = imread(fpath, key=axes_selections.get('z', None))
